@@ -16,6 +16,7 @@ $colorContrast: #00e9e9cc;
 body {
     background-color: #e5fdfd;
 }
+
 #root {
     padding: 30px 0;
 
@@ -23,6 +24,7 @@ body {
         padding: 15px 0 0 0;
     }
 }
+
 .container {
     padding: 30px 0px;
     margin: 0 auto;
@@ -36,6 +38,7 @@ body {
         height: 100vh;
     }
 }
+
 .todo {
     display: flex;
     position: relative;
@@ -44,6 +47,7 @@ body {
     @media (max-width: 749px) {
         display: block;
     }
+
     &__title {
         color: $colorBlack;
         text-align: center;
@@ -55,10 +59,12 @@ body {
         @media (max-width: 749px) {
             font-size: 30px;
         }
+        
         @media (max-width: 499px) {
             font-size: 24px;
         }
     }
+
     &__left {
         width: 60%;
         margin-right: 50px;
@@ -68,6 +74,7 @@ body {
             margin-right: 0;
         }
     }
+
     &__right {
         width: 40%;
         padding: 0 20px 50px 0;
@@ -78,6 +85,7 @@ body {
         }
     }
 }
+
 .datepanel {
     background-color: $colorBlack;
     border-radius: 0px 10px 10px 0px;
@@ -87,6 +95,7 @@ body {
         border-radius: 10px;
         margin: 0 -20px 30px -20px;
     }
+
     &__time {
         font-size: 98px;
         color: $colorWhite;
@@ -97,6 +106,7 @@ body {
            display:none;
         }
     }
+
     &__date {
         padding: 12px;
         font-size: 24px;
@@ -116,6 +126,7 @@ body {
         }
     }
 }
+
 .form {
     padding: 0 0 0 20px;
     display: flex;
@@ -125,6 +136,7 @@ body {
     @media (max-width: 749px) {
         padding: 0 20px;
     }
+
     &__input{
         padding: 8px 15px;
         width: 78%;
@@ -141,38 +153,46 @@ body {
             padding: 11px 16px;
             width: 70%;
         }
+
         &::placeholder {
             font-style: italic;
             font-size: 15px;
         }
+
         &:hover {
             box-shadow: 0px 0px 8px 6px $colorBlack;
             cursor: pointer;
         }
+
         &:focus {
            outline: auto;
         }
     }
+
     &__btn {
         padding: 8px 15px;
         border-radius: 10px;
         background-color: $colorContrast;
         border: 1px solid $colorWhite;
         font-size: 16px;
-        transition: all 0.2s linear;       
+        transition: all 0.2s linear;   
+
             &:hover {
             box-shadow: 0px 0px 8px 6px $colorBlack;
             cursor: pointer;
             }
+
             &:active {
                 font-weight:900;
             }
 }
 }
+
 .delete {
     position: absolute;
     right: 20px;
     bottom: 0;
+    
     &__btn {
         padding: 6px;
         border-radius: 50%;
@@ -182,17 +202,20 @@ body {
         background-color: $colorBlack;
         border: 2px solid $colorContrast;
         margin: 0 auto;
+
         &:hover{
             cursor: pointer;
             box-shadow: 0px 0px 8px 6px $colorBlack;          
         }
     }
+
     &__text {
         color: $colorWhite;
         text-align: center;
         font-size: 16px;
     }
 }
+
 .counter {
     padding: 0 0 0 20px;
     display: flex;
@@ -203,6 +226,7 @@ body {
     @media (max-width: 749px) {
         margin-bottom: 20px;
     }
+
     &__round {
         padding: 25px;
         border-radius: 50%;
@@ -233,11 +257,13 @@ body {
         &:last-child {
             margin-right: 0;
         }
+
         &:hover {
             cursor: pointer;
             box-shadow: 0px 0px 8px 6px $colorBlack;        
 
         }
+
         &-count {
             color: $colorWhite;
             text-align: center;
@@ -254,16 +280,19 @@ body {
                 margin-bottom: 2px;
             }
        }
+
         &-text {
             color: $colorWhite;
             text-align: center;
             font-size: 16px;
+
             @media (max-width: 749px) {
                 font-size: 14px;
             }
        }
     }
 }
+
 .close {
     position: absolute;
     right: 0;
@@ -277,6 +306,7 @@ body {
         background-color: $colorContrast;
     }
 }
+
 .search {
     position: relative;
     margin-bottom: 30px;
@@ -338,6 +368,7 @@ body {
         }
     }
 }
+
 .list {
     list-style: none;
     height: 100%;
@@ -352,6 +383,7 @@ body {
     @media (max-width: 499px) {
        max-height: 180px;
     }
+
     &__item {
         width: 94%;
         background-color: $colorBlack;
@@ -371,10 +403,12 @@ body {
         &:hover{
             cursor: pointer;
         }
+
         &:hover::before{
             cursor: pointer;
             background-color: $colorContrast;
         }
+
         &::before{
             content: "";
             position: absolute;
@@ -386,9 +420,11 @@ body {
             border: 1px solid $colorContrast;
             transition: all 0.3s linear;
         }
+
         &.checked {
             text-decoration: line-through;
             transition: all 0.3s linear;
+
             &::before{
                 content: "\2713";
                 position: absolute;
@@ -403,6 +439,7 @@ body {
         }
     }
 }
+
 .progress {
     height: 20px;
     border-radius: 10px;
@@ -415,10 +452,12 @@ body {
     @media (max-width: 499px) {
         height: 8px;
     }
+
     &-wrap{
         position: relative;
         background-color: $colorBlack;
     }
+
     &-bar{
         position: absolute;
         left: 0;
