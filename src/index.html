@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>MY TO DO LIST</title>
+</head>
+<body>
+    <section id="root">
+        <h1 class="todo__title">MY TO DO LIST</h1>
+        <div class="container">
+        <div class="todo">
+            <div class="todo__left">
+                <div class="datepanel">
+                    <p class="datepanel__time" id="clock"></p>
+                    <p class="datepanel__date">
+                        <span class="month"></span>
+                        <span class="day"></span>,
+                        <span class="year"></span></p>
+                </div>
+                <div class="form">
+                    <input type="text" placeholder="Add task" class="form__input" id="taskInput">
+                    <button class="btn form__btn" id="addBtn">Add</button>
+                </div>
+                <div class="counter">
+                    <div class="counter__total counter__round">
+                        <p class="counter__round-count" id="counter__total-count">5</p>
+                        <p class="counter__total-text counter__round-text">Total</p>
+                    </div>
+                    <div class="counter__remaining counter__round">
+                        <p class="counter__round-count" id="counter__remaining-count">3</p>
+                        <p class="counter__remaining-text counter__round-text">Remain</p>
+                    </div>
+                    <div class="counter__done counter__round">
+                        <p class="counter__round-count" id="counter__done-count">2</p>
+                        <p class="counter__total-text counter__round-text">Done</p>
+                    </div>
+                </div>
+                <div class="progress-wrap progress">
+                    <div class="progress-bar progress"></div>
+                  </div>
+        </div>
+            <div class="todo__right">
+                <div class="search">
+                <input type="text" placeholder="Search" class="search__input" id="searchInput" onkeyup="searchFunction()">
+                <button class="btn search__btn" id="searchBtn">
+                    <svg style="width:23px;height:23px" viewBox="0 0 24 24">
+                        <path fill="white" d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" />
+                    </svg>
+                </button>
+                </div>
+                <ul class="list">
+                </ul>
+                <div class="delete">
+                <button class="btn delete__btn" id="deleteBtn">
+                    <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+                        <path fill="white" d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" />
+                    </svg>
+                </button>
+                <p class="delete__text">Delete All</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+</html>
