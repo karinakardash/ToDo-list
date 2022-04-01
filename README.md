@@ -1,7 +1,5 @@
 # ToDo-list
----
-permalink: /index.html
----
+
 A web application that can be used to set tasks and control their implementation
 
 The application has been coded using the following technologies:
@@ -12,10 +10,10 @@ The application has been coded using the following technologies:
 
 Steps for ToDo-list application installation:
 
-1. Download a repository from github:
+> 1. Download a repository from github:
 
 https://github.com/karinakardash/ToDo-list.git
 
-2. Install node_modules:
+> 2. Install node_modules:
 
 $ npm install 
