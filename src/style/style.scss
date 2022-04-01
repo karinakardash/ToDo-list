@@ -233,13 +233,11 @@ body {
         &:last-child {
             margin-right: 0;
         }
-
         &:hover {
             cursor: pointer;
             box-shadow: 0px 0px 8px 6px $colorBlack;        
 
         }
-
         &-count {
             color: $colorWhite;
             text-align: center;
@@ -256,19 +254,16 @@ body {
                 margin-bottom: 2px;
             }
        }
-
         &-text {
             color: $colorWhite;
             text-align: center;
             font-size: 16px;
-
             @media (max-width: 749px) {
                 font-size: 14px;
             }
        }
     }
 }
-
 .close {
     position: absolute;
     right: 0;
@@ -282,7 +277,6 @@ body {
         background-color: $colorContrast;
     }
 }
-
 .search {
     position: relative;
     margin-bottom: 30px;
@@ -335,18 +329,15 @@ body {
             font-style: italic;
             font-size: 15px;
         }
-
         &:hover {
             box-shadow: 0px 0px 8px 6px $colorBlack;
             cursor: pointer;
         }
-
         &:focus {
             outline: auto;
         }
     }
 }
-
 .list {
     list-style: none;
     height: 100%;
@@ -361,7 +352,6 @@ body {
     @media (max-width: 499px) {
        max-height: 180px;
     }
-
     &__item {
         width: 94%;
         background-color: $colorBlack;
@@ -381,12 +371,10 @@ body {
         &:hover{
             cursor: pointer;
         }
-
         &:hover::before{
             cursor: pointer;
             background-color: $colorContrast;
         }
-
         &::before{
             content: "";
             position: absolute;
@@ -398,11 +386,9 @@ body {
             border: 1px solid $colorContrast;
             transition: all 0.3s linear;
         }
-
         &.checked {
             text-decoration: line-through;
             transition: all 0.3s linear;
-
             &::before{
                 content: "\2713";
                 position: absolute;
@@ -417,7 +403,6 @@ body {
         }
     }
 }
-
 .progress {
     height: 20px;
     border-radius: 10px;
@@ -430,12 +415,10 @@ body {
     @media (max-width: 499px) {
         height: 8px;
     }
-
     &-wrap{
         position: relative;
         background-color: $colorBlack;
     }
-
     &-bar{
         position: absolute;
         left: 0;
