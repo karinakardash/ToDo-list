@@ -87,14 +87,13 @@ body {
 
 .todo__right {
   width: 40%;
-  padding-right: 20px;
-  padding-bottom: 50px;
+  padding: 0 20px 50px 0;
 }
 
 @media (max-width: 749px) {
   .todo__right {
     width: 100%;
-    padding-right: 0;
+    padding: 0 0 50px 0;
   }
 }
 
@@ -107,9 +106,7 @@ body {
 @media (max-width: 749px) {
   .datepanel {
     border-radius: 10px;
-    margin-right: -20px;
-    margin-left: -20px;
-    margin-bottom: 30px;
+    margin: 0 -20px 30px -20px;
   }
 }
 
