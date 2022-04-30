@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "a web application that can be used to set task and control their implementation",
   "scripts": {
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
