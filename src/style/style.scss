@@ -1,467 +1,480 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@500&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  outline: none;
 }
 
 $colorWhite: #ffffff;
 $colorBlack: #000000;
-$colorBackground:#193131;
+$colorBackground: #193131;
 $colorContrast: #00e9e9cc;
 
 body {
-    background-color: #e5fdfd;
+  background-color: #e5fdfd;
 }
 
 #root {
-    padding: 30px 0;
+  padding: 30px 0;
 
-    @media (max-width: 749px) {
-        padding: 15px 0 0 0;
-    }
+  @media (max-width: 749px) {
+    padding: 15px 0 0 0;
+  }
 }
 
 .container {
-    padding: 30px 0px;
-    margin: 0 auto;
-    width:100%;
-    max-width: 750px;
-    background-color: $colorBackground;
-    border-radius: 20px;
-    
-    @media (max-width: 749px) {
-        padding: 0 20px 30px 20px;
-        height: 100vh;
-    }
+  padding: 30px 0px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 750px;
+  background-color: $colorBackground;
+  border-radius: 20px;
+
+  @media (max-width: 749px) {
+    padding: 0 20px 30px 20px;
+    height: 100vh;
+  }
 }
 
 .todo {
-    display: flex;
-    position: relative;
-    padding: 0 0 30px 0;
+  display: flex;
+  position: relative;
+  padding: 0 0 30px 0;
+
+  @media (max-width: 749px) {
+    display: block;
+  }
+
+  &__title {
+    color: $colorBlack;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 15px;
 
     @media (max-width: 749px) {
-        display: block;
+      font-size: 30px;
     }
 
-    &__title {
-        color: $colorBlack;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 36px;
-        margin-bottom: 15px;
-
-        @media (max-width: 749px) {
-            font-size: 30px;
-        }
-        
-        @media (max-width: 499px) {
-            font-size: 24px;
-        }
+    @media (max-width: 499px) {
+      font-size: 24px;
     }
+  }
 
-    &__left {
-        width: 60%;
-        margin-right: 50px;
+  &__left {
+    width: 60%;
+    margin-right: 50px;
 
-        @media (max-width: 749px) {
-            width: 100%;
-            margin-right: 0;
-        }
+    @media (max-width: 749px) {
+      width: 100%;
+      margin-right: 0;
     }
+  }
 
-    &__right {
-        width: 40%;
-        padding: 0 20px 50px 0;
+  &__right {
+    width: 40%;
+    padding: 0 20px 50px 0;
 
-        @media (max-width: 749px) {
-            width: 100%;
-            padding: 0 0 50px 0;
-        }
+    @media (max-width: 749px) {
+      width: 100%;
+      padding: 0 0 50px 0;
     }
+  }
 }
 
 .datepanel {
-    background-color: $colorBlack;
-    border-radius: 0px 10px 10px 0px;
-    margin-bottom: 20px;
+  background-color: $colorBlack;
+  border-radius: 0px 10px 10px 0px;
+  margin-bottom: 20px;
+
+  @media (max-width: 749px) {
+    border-radius: 10px;
+    margin: 0 -20px 30px -20px;
+  }
+
+  &__time {
+    font-size: 98px;
+    color: $colorWhite;
+    text-align: center;
+    padding: 12px;
 
     @media (max-width: 749px) {
-        border-radius: 10px;
-        margin: 0 -20px 30px -20px;
+      display: none;
     }
+  }
 
-    &__time {
-        font-size: 98px;
-        color: $colorWhite;
-        text-align: center;
-        padding:12px;
+  &__date {
+    padding: 12px;
+    font-size: 24px;
+    color: $colorWhite;
+    text-align: center;
+    background-color: $colorContrast;
+    border-radius: 0px 0px 10px 0px;
 
-        @media (max-width: 749px) {
-           display:none;
-        }
+    @media (max-width: 749px) {
+      border-radius: 10px;
+      font-size: 22px;
+      background-color: $colorBlack;
+      color: $colorContrast;
     }
-
-    &__date {
-        padding: 12px;
-        font-size: 24px;
-        color: $colorWhite;
-        text-align: center;
-        background-color: $colorContrast;
-        border-radius: 0px 0px 10px 0px;
-
-        @media (max-width: 749px) {
-            border-radius: 10px;
-            font-size: 22px;
-            background-color: $colorBlack;
-            color:$colorContrast;
-        }
-        @media (max-width: 499px) {
-            font-size: 18px;
-        }
+    @media (max-width: 499px) {
+      font-size: 18px;
     }
+  }
 }
 
 .form {
-    padding: 0 0 0 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+  padding: 0 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media (max-width: 749px) {
+    padding: 0 20px;
+  }
+
+  &__input {
+    padding: 8px 15px;
+    width: 78%;
+    border-radius: 10px;
+    border: 1px solid $colorBlack;
+    transition: all 0.3s linear;
+    font-size: 16px;
 
     @media (max-width: 749px) {
-        padding: 0 20px;
+      padding: 10px 16px;
+      width: 82%;
+    }
+    @media (max-width: 499px) {
+      padding: 11px 16px;
+      width: 70%;
     }
 
-    &__input{
-        padding: 8px 15px;
-        width: 78%;
-        border-radius: 10px;
-        border: 1px solid $colorBlack;
-        transition: all 0.3s linear;
-        font-size: 16px;
-
-        @media (max-width: 749px) {
-            padding: 10px 16px;
-            width: 82%;
-        }
-        @media (max-width: 499px) {
-            padding: 11px 16px;
-            width: 70%;
-        }
-
-        &::placeholder {
-            font-style: italic;
-            font-size: 15px;
-        }
-
-        &:hover {
-            box-shadow: 0px 0px 8px 6px $colorBlack;
-            cursor: pointer;
-        }
-
-        &:focus {
-           outline: auto;
-        }
+    &::placeholder {
+      font-style: italic;
+      font-size: 15px;
     }
 
-    &__btn {
-        padding: 8px 15px;
-        border-radius: 10px;
-        background-color: $colorContrast;
-        border: 1px solid $colorWhite;
-        font-size: 16px;
-        transition: all 0.2s linear;   
+    &:hover {
+      box-shadow: 0px 0px 8px 6px $colorBlack;
+      cursor: pointer;
+    }
 
-            &:hover {
-            box-shadow: 0px 0px 8px 6px $colorBlack;
-            cursor: pointer;
-            }
+    &:focus {
+      outline: auto;
+    }
+  }
 
-            &:active {
-                font-weight:900;
-            }
-}
+  &__btn {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: $colorContrast;
+    border: 1px solid $colorWhite;
+    font-size: 16px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      box-shadow: 0px 0px 8px 6px $colorBlack;
+      cursor: pointer;
+    }
+
+    &:active {
+      font-weight: 900;
+    }
+  }
 }
 
 .delete {
-    position: absolute;
-    right: 20px;
-    bottom: 0;
-    
-    &__btn {
-        padding: 6px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $colorBlack;
-        border: 2px solid $colorContrast;
-        margin: 0 auto;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
 
-        &:hover{
-            cursor: pointer;
-            box-shadow: 0px 0px 8px 6px $colorBlack;          
-        }
-    }
+  &__btn {
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorBlack;
+    border: 2px solid $colorContrast;
+    margin: 0 auto;
 
-    &__text {
-        color: $colorWhite;
-        text-align: center;
-        font-size: 16px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 8px 6px $colorBlack;
     }
+  }
+
+  &__text {
+    color: $colorWhite;
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 .counter {
-    padding: 0 0 0 20px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    justify-content: space-between;
+  padding: 0 0 0 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: space-between;
+
+  @media (max-width: 749px) {
+    margin-bottom: 20px;
+  }
+
+  &__round {
+    padding: 25px;
+    border-radius: 50%;
+    border: 5px solid $colorContrast;
+    background-color: $colorBlack;
+    width: 120px;
+    height: 120px;
+    transition: all 0.3s linear;
 
     @media (max-width: 749px) {
-        margin-bottom: 20px;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
     }
 
-    &__round {
-        padding: 25px;
-        border-radius: 50%;
-        border: 5px solid $colorContrast;
-        background-color: $colorBlack;
-        width: 120px;
-        height: 120px;
-        transition: all 0.3s linear;
-
-        @media (max-width: 749px) {
-            width: 100px;
-            height: 100px;
-            padding: 20px;
-        }
-
-        @media (max-width: 499px) {
-            width: 90px;
-            height: 90px;
-            padding: 12px;
-        }
-        
-        @media (max-width: 363px) {
-            width: 80px;
-            height: 80px;
-            padding: 10px;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover {
-            cursor: pointer;
-            box-shadow: 0px 0px 8px 6px $colorBlack;        
-
-        }
-
-        &-count {
-            color: $colorWhite;
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 5px;
-
-            @media (max-width: 749px) {
-                font-size: 20px;
-                margin-bottom: 2px;
-            }
-    
-            @media (max-width: 499px) {
-                font-size: 18px;
-                margin-bottom: 2px;
-            }
-       }
-
-        &-text {
-            color: $colorWhite;
-            text-align: center;
-            font-size: 16px;
-
-            @media (max-width: 749px) {
-                font-size: 14px;
-            }
-       }
+    @media (max-width: 499px) {
+      width: 90px;
+      height: 90px;
+      padding: 12px;
     }
+
+    @media (max-width: 363px) {
+      width: 80px;
+      height: 80px;
+      padding: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 8px 6px $colorBlack;
+    }
+
+    &-count {
+      color: $colorWhite;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 5px;
+
+      @media (max-width: 749px) {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
+
+      @media (max-width: 499px) {
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+    }
+
+    &-text {
+      color: $colorWhite;
+      text-align: center;
+      font-size: 16px;
+
+      @media (max-width: 749px) {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 8px;
-    color: $colorWhite;
-    border-radius: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px;
+  color: $colorWhite;
+  border-radius: 10px;
 
-    &:hover {
-        cursor: pointer;
-        background-color: $colorContrast;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: $colorContrast;
+  }
 }
 
 .search {
-    position: relative;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    &::before {
-        content: url(../media/search-icon.svg);
-        position: absolute;
-        top: 12px;
-        left: 15px;
-        width: 14px;
-        height: 14px;
-        object-fit: cover;
+  &::before {
+    content: url(../media/search-icon.svg);
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 14px;
+    height: 14px;
+    object-fit: cover;
+  }
+
+  &__btn {
+    background-color: $colorBackground;
+    border: none;
+    transition: all 0.3s linear;
+
+    & path {
+      transition: all 0.3s linear;
     }
 
-    &__btn{
-        background-color: $colorBackground;
-        border: none;
-        transition: all 0.3s linear;
-
-        & path {
-            transition: all 0.3s linear;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:hover path {
-            fill: $colorContrast;
-        }
-
-        &:active path {
-            fill: $colorBlack;
-        }
+    &:hover {
+      cursor: pointer;
     }
 
-    &__input {
-        padding: 8px 10px 8px 40px;
-        width: 90%;
-        border-radius: 10px;
-        border: 1px solid $colorBlack;
-        transition: all 0.3s linear;
-        font-size: 16px;
-        margin-right: 10px;
-
-        &::placeholder {
-            font-style: italic;
-            font-size: 15px;
-        }
-        &:hover {
-            box-shadow: 0px 0px 8px 6px $colorBlack;
-            cursor: pointer;
-        }
-        &:focus {
-            outline: auto;
-        }
+    &:hover path {
+      fill: $colorContrast;
     }
+
+    &:active path {
+      fill: $colorBlack;
+    }
+  }
+
+  &__input {
+    padding: 8px 10px 8px 40px;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid $colorBlack;
+    transition: all 0.3s linear;
+    font-size: 16px;
+    margin-right: 10px;
+
+    &::placeholder {
+      font-style: italic;
+      font-size: 15px;
+    }
+    &:hover {
+      box-shadow: 0px 0px 8px 6px $colorBlack;
+      cursor: pointer;
+    }
+    &:focus {
+      outline: auto;
+    }
+  }
 }
 
 .list {
-    list-style: none;
-    height: 100%;
-    max-height: 310px;
-    overflow: scroll;
+  list-style: none;
+  height: 100%;
+  max-height: 310px;
+  overflow-y: scroll;
+  scrollbar-width: 4px;
+  scrollbar-color: rgb(0, 0, 0) rgba(0, 0, 0, 0.3);
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 749px) {
+    padding: 0 20px 30px 20px;
+    height: 200px;
+  }
+
+  @media (max-width: 499px) {
+    max-height: 180px;
+  }
+
+  &__item {
+    width: 94%;
+    background-color: $colorBlack;
+    color: $colorWhite;
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding: 8px 15px 8px 40px;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
+    transition: all 0.3s linear;
 
     @media (max-width: 749px) {
-        padding: 0 20px 30px 20px;
-        height: 200px;
+      width: 100%;
     }
 
-    @media (max-width: 499px) {
-       max-height: 180px;
+    &:hover {
+      cursor: pointer;
     }
 
-    &__item {
-        width: 94%;
-        background-color: $colorBlack;
-        color: $colorWhite;
-        font-size: 16px;
-        margin-bottom: 8px;
-        padding: 8px 15px 8px 40px;
-        border-radius: 10px;
-        position: relative;
-        word-wrap: break-word;
-        transition: all 0.3s linear;
-
-        @media (max-width: 749px) {
-            width: 100%;
-        }
-
-        &:hover{
-            cursor: pointer;
-        }
-
-        &:hover::before{
-            cursor: pointer;
-            background-color: $colorContrast;
-        }
-
-        &::before{
-            content: "";
-            position: absolute;
-            width:20px;
-            height: 20px;
-            border-radius: 50%;
-            top: 7px;
-            left: 8px;
-            border: 1px solid $colorContrast;
-            transition: all 0.3s linear;
-        }
-
-        &.checked {
-            text-decoration: line-through;
-            transition: all 0.3s linear;
-
-            &::before{
-                content: "\2713";
-                position: absolute;
-                width:20px;
-                height: 20px;
-                border-radius: 50%;
-                top: 7px;
-                left: 8px;
-                border: 1px solid $colorContrast;
-                text-align: center;
-            }
-        }
+    &:hover::before {
+      cursor: pointer;
+      background-color: $colorContrast;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      top: 7px;
+      left: 8px;
+      border: 1px solid $colorContrast;
+      transition: all 0.3s linear;
+    }
+
+    &.checked {
+      text-decoration: line-through;
+      transition: all 0.3s linear;
+
+      &::before {
+        content: "\2713";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 7px;
+        left: 8px;
+        border: 1px solid $colorContrast;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .progress {
-    height: 20px;
-    border-radius: 10px;
+  height: 20px;
+  border-radius: 10px;
 
-    @media (max-width: 749px) {
-        height: 10px;
-        margin-bottom: 40px;
-    }
+  @media (max-width: 749px) {
+    height: 10px;
+    margin-bottom: 40px;
+  }
 
-    @media (max-width: 499px) {
-        height: 8px;
-    }
+  @media (max-width: 499px) {
+    height: 8px;
+  }
 
-    &-wrap{
-        position: relative;
-        background-color: $colorBlack;
-    }
+  &-wrap {
+    position: relative;
+    background-color: $colorBlack;
+  }
 
-    &-bar{
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: $colorContrast;    
-        }
+  &-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $colorContrast;
+  }
 }
